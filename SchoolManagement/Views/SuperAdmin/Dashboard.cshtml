@@ -1,0 +1,79 @@
+﻿@section Styles {
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+}
+
+<div class="d-flex" style="margin-left:-10vw; margin-bottom:10vh;">
+    <!-- Sidebar -->
+    <div class="bg-dark text-white p-3 vh-100" style="width: 250px;">
+        <h4 class="text-center">Admin Panel</h4>
+        <ul class="nav flex-column">
+            <li class="nav-item"><a class="nav-link text-white" href="#dashboard">Dashboard</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#manage-students">Manage Students</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#manage-teachers">Manage Teachers</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#manage-classes">Manage Classes</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#attendance">Attendance</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#assignments">Assignments</a></li>
+            <li class="nav-item"><a class="nav-link text-white" href="#marks">Marks</a></li>
+            <li class="nav-item"><a class="nav-link btn btn-danger text-white mt-3" asp-action="Logout" asp-controller="Home">Logout</a></li>
+        </ul>
+    </div>
+
+    <!-- Main Content -->
+    <div class="container-fluid p-4">
+        <h2>Admin Dashboard</h2>
+
+        <!-- Dashboard Stats -->
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card bg-primary text-white text-center p-3">
+                    <h5>Total Students</h5>
+                    <h3>250</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-success text-white text-center p-3">
+                    <h5>Total Teachers</h5>
+                    <h3>40</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-warning text-dark text-center p-3">
+                    <h5>Classes</h5>
+                    <h3>12</h3>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card bg-danger text-white text-center p-3">
+                    <h5>Pending Assignments</h5>
+                    <h3>15</h3>
+                </div>
+            </div>
+        </div>
+
+        <!-- Students Table -->
+        <h3 id="manage-students" class="mt-4">Manage Students</h3>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Class</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>John Doe</td>
+                        <td>Grade 10</td>
+                        <td>
+                            <button class="btn btn-primary btn-sm">Edit</button>
+                            <button class="btn btn-danger btn-sm">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

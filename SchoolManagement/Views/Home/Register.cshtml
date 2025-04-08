@@ -1,0 +1,120 @@
+﻿@model SchoolManagement.Models.Register
+
+@{
+    ViewData["Title"] = "SignUp";
+}
+@section Styles {
+    <link href="~/lib/bootstrap/dist/css/bootstrap.css" rel="stylesheet" />
+}
+
+<div class="container mt-5" style="margin-bottom:10vh;">
+    <h1 class="text-center text-primary">Sign Up</h1>
+    <h4 class="text-secondary">Admin Details</h4>
+    <hr />
+    <a asp-action="Login" asp-controller="Home" class="btn btn-outline-primary mb-3">Back</a>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 shadow-lg p-4 rounded bg-light">
+            <form asp-action="RegisterValidation" asp-controller="Home">
+                <div asp-validation-summary="ModelOnly" class="alert alert-danger"></div>
+
+                <div class="mb-3">
+                    <label asp-for="SchoolName" class="form-label fw-bold"></label>
+                    <input asp-for="SchoolName" class="form-control" placeholder="Enter School Name" />
+                    <span asp-validation-for="SchoolName" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="SchoolAddress" class="form-label fw-bold"></label>
+                    <input asp-for="SchoolAddress" class="form-control" placeholder="Enter School Address" />
+                    <span asp-validation-for="SchoolAddress" class="text-danger"></span>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="EstablishmentDate" class="form-label fw-bold"></label>
+                    <input asp-for="EstablishmentDate" type="date" class="form-control" />
+                    
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="SchoolPhone" class="form-label fw-bold"></label>
+                        <input asp-for="SchoolPhone" class="form-control" placeholder="Enter Phone Number" />
+                        <span asp-validation-for="SchoolPhone" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="SchoolEmail" class="form-label fw-bold"></label>
+                        <input asp-for="SchoolEmail" type="email" class="form-control" placeholder="Enter Email" />
+                        <span asp-validation-for="SchoolEmail" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="AdminEmail" class="form-label fw-bold"></label>
+                    <input asp-for="AdminEmail" type="email" class="form-control" placeholder="Enter Admin Email" />
+                    <span asp-validation-for="AdminEmail" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="AdminName" class="form-label fw-bold"></label>
+                        <input asp-for="AdminName" class="form-control" placeholder="Enter Admin Name" />
+                        <span asp-validation-for="AdminName" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="AdminDob" class="form-label fw-bold"></label>
+                        <input asp-for="AdminDob" type="date" class="form-control" />
+                       
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="AdminGender" class="form-label fw-bold"></label>
+                    <select asp-for="AdminGender" class="form-select">
+                        <option value="">Select Gender</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                   
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="AdminAddress" class="form-label fw-bold"></label>
+                    <input asp-for="AdminAddress" class="form-control" placeholder="Enter Address" />
+                    
+                </div>
+
+                <div class="mb-3">
+                    <label asp-for="AdminPhone" class="form-label fw-bold"></label>
+                    <input asp-for="AdminPhone" class="form-control" placeholder="Enter Phone Number" />
+                    <span asp-validation-for="AdminPhone" class="text-danger"></span>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="Password" class="form-label fw-bold"></label>
+                        <input asp-for="Password" type="password" class="form-control" placeholder="Enter Password" />
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label asp-for="ConfirmPassword" class="form-label fw-bold"></label>
+                        <input asp-for="ConfirmPassword" type="password" class="form-control" placeholder="Confirm Password" />
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button type="submit" class="btn btn-success w-100 fw-bold">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

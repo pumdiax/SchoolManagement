@@ -10,5 +10,18 @@ public class ApplicationDbContext : IdentityDbContext
         : base(options)
     { }
 
+    
     public DbSet<UserDetail> UserDetail { get; set; }
+    public DbSet<Role> Roles { get; set; }
+
+    protected override void OnModelCreating(ModelBuilder modelBuilder)
+    {
+        base.OnModelCreating(modelBuilder);
+
+        // Configure the one-to-many relationship between Role and UserDetail
+        modelBuilder.Entity<UserDetail>()
+            .HasOne(ud => ud.Role)
+            .WithMany(r => r.UserDetail)
+            .HasForeignKey(ud => ud.RoleId);
+    }
 }

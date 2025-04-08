@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SchoolManagement.Data;
 
@@ -11,9 +12,11 @@ using SchoolManagement.Data;
 namespace SchoolManagement.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250408125102_my")]
+    partial class my
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -342,7 +345,7 @@ namespace SchoolManagement.Data.Migrations
             modelBuilder.Entity("SchoolManagement.Models.UserDetail", b =>
                 {
                     b.HasOne("SchoolManagement.Models.Role", "Role")
-                        .WithMany("UserDetail")
+                        .WithMany("UserDetails")
                         .HasForeignKey("RoleId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
@@ -352,7 +355,7 @@ namespace SchoolManagement.Data.Migrations
 
             modelBuilder.Entity("SchoolManagement.Models.Role", b =>
                 {
-                    b.Navigation("UserDetail");
+                    b.Navigation("UserDetails");
                 });
 #pragma warning restore 612, 618
         }

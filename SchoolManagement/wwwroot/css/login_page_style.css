@@ -1,0 +1,303 @@
+﻿@media (min-width: 720px) and (max-width: 10000px) {
+    body {
+        margin: 0;
+        padding: 0;
+    }
+      @keyframes colorFlow {
+        0% {
+            border-color: rgb(14, 173, 8);
+        }
+
+        25% {
+            border-color: lightseagreen;
+        }
+
+        50% {
+            border-color: gold;
+        }
+
+        75% {
+            border-color: rgb(219, 5, 166);
+        }
+
+        100% {
+            border-color: rgb(175, 65, 2);
+        }
+    }
+      @keyframes moveBackground {
+        from {
+            background-position: -100% center;
+        }
+
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    .form-container {
+        margin: 0px;
+        padding: 0px;
+        height: 110vh;
+        width: 98.84vw;
+        border: 3px solid gold;
+        display: flex; /* display: grid;  place-items: center; */
+        justify-content: center;
+        align-items: center;
+        animation: colorFlow 5s linear infinite; /* Apply the animation */
+        background-color: lavender;
+        margin-bottom: 9vh;
+        margin-left:-8.5vw;
+    }
+
+    .card-border {
+        height: 600px;
+        width: 500px;
+        border: 5px solid lightseagreen;
+        animation: colorFlow 5s linear infinite; /* Apply the animation */
+        background-color: blue;
+        background-image: linear-gradient(to right, red, blue, lime, hotpink, red);
+        background-size: 300% 100%;
+        background-position: left center;
+        animation: moveBackground 10s linear infinite;
+        animation-timing-function: linear;
+        margin-top: 50px;
+        margin-bottom:10vh;
+  
+    }
+
+    /* General styles for the form container */
+    .login-card {
+        background-color: lightcyan;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 440px;
+        margin: 0 auto; /* Center horizontally */
+        margin-top: 9px;
+        padding: 20px;
+        text-align: center;
+    }
+
+        /* Header style */
+        .login-card h1 {
+            margin-bottom: 55px;
+            color: #333;
+        }
+
+    /* Form group styles */
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+        /* Label styles */
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+    /* Select and input styles */
+    .form-controls {
+        width: 20vw;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* Button container styles */
+    .button-container {
+        margin-top: 20px;
+    }
+
+    /* Button styles */
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #002ba1;
+        }
+
+    /* Link styles */
+    .link-primary {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .link-primary:hover {
+            text-decoration: underline;
+        }
+
+    /* Margin utility class for top margin */
+    .mt-4 {
+        margin-top: 1.5rem;
+    }
+}
+
+
+
+
+/*
+
+<----------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+                                                  THIS style is form the Phones
+<----------------------------------------------------------------------------------------------------------------------------------------->
+*/
+
+
+@media (min-width: 320px) and (max-width:500px) {
+    body {
+        margin: 0;
+        padding: 0;
+
+    }
+
+    @keyframes colorFlow {
+        0% {
+            border-color: rgb(14, 173, 8);
+        }
+
+        25% {
+            border-color: lightseagreen;
+        }
+
+        50% {
+            border-color: gold;
+        }
+
+        75% {
+            border-color: rgb(219, 5, 166);
+        }
+
+        100% {
+            border-color: rgb(175, 65, 2);
+        }
+    }
+
+    @keyframes moveBackground {
+        from {
+            background-position: -100% center;
+        }
+
+        to {
+            background-position: 200% center;
+        }
+    }
+
+    .form-container {
+        margin: 0px;
+        padding: 0px;
+        height: 650px;
+        width: 100vw;
+        border: 3px solid gold;
+        display: flex; /* display: grid;  place-items: center; */
+        justify-content: center;
+        align-items: center;
+        animation: colorFlow 5s linear infinite; /* Apply the animation */
+        background-color: lavender;
+        margin-left:-11px;
+        margin-bottom:50px;
+                    
+    }
+
+    .card-border {
+        height: 550px;
+        width: 90%;
+        border: 5px solid lightseagreen;
+        animation: colorFlow 5s linear infinite; /* Apply the animation */
+        background-color: blue;
+        background-image: linear-gradient(to right, red, blue, lime, hotpink, red);
+        background-size: 300% 100%;
+        background-position: left center;
+        animation: moveBackground 10s linear infinite;
+        animation-timing-function: linear;
+        margin-top: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* General styles for the form container */
+    .login-card {
+        background-color: lightcyan;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        width: 300px;
+        margin: 0 auto; /* Center horizontally */
+        margin-top: 10px;
+        padding: 20px;
+        text-align: center;
+    }
+
+        /* Header style */
+        .login-card h1 {
+            margin-bottom: 100px;
+            color: #333;
+        }
+
+    /* Form group styles */
+    .form-group {
+        margin-bottom: 15px;
+        text-align: left;
+    }
+
+        /* Label styles */
+        .form-group label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
+        }
+
+    /* Select and input styles */
+    .form-controls {
+        width: 250px;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    /* Button container styles */
+    .button-container {
+        margin-top: 20px;
+    }
+
+    /* Button styles */
+    .btn-primary {
+        background-color: #007bff;
+        border: none;
+        color: white;
+        padding: 10px 20px;
+        border-radius: 4px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+        .btn-primary:hover {
+            background-color: #002ba1;
+        }
+
+    /* Link styles */
+    .link-primary {
+        color: #007bff;
+        text-decoration: none;
+    }
+
+        .link-primary:hover {
+            text-decoration: underline;
+        }
+
+    /* Margin utility class for top margin */
+    .mt-4 {
+        margin-top: 1.5rem;
+    }
+}

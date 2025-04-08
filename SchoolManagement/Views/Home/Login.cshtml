@@ -1,0 +1,58 @@
+﻿@model SchoolManagement.Models.LoginDetails
+@section Styles {
+    <link href="~/css/login_page_style.css" rel="stylesheet" />
+}
+<div class="row">
+    <div class="col-md-4">
+        @if (TempData.Peek("Message") != null)
+        {
+            <div class="alert alert-danger">
+                @TempData["Message"]
+            </div>
+        }
+        <div class="form-container">
+            <div class="card-border">
+                <div class="login-card">
+                    <h1 class="text-center">Welcome</h1>
+                    <div class="row">
+                        <div class="col-md-4">
+
+                            <form asp-controller="Home" asp-action="UserValidation" method="post">
+                                <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                <div class="form-group">
+                                    <label asp-for="SchoolName" class="control-label">Choose your School</label>
+                                    <select asp-for="SchoolName" class="form-controls">
+                                        <option value="" disabled selected>-- Select School --</option>
+                                        <option value="None">None</option>
+                                        
+                                    </select>
+                                    <span asp-validation-for="SchoolName" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="UserEmail" class="control-label"></label>
+                                    <input asp-for="UserEmail" class="form-controls" />
+                                    <span asp-validation-for="UserEmail" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <label asp-for="UserPassword" class="control-label"></label>
+                                    <input asp-for="UserPassword" class="form-controls" />
+                                    <span asp-validation-for="UserPassword" class="text-danger"></span>
+                                </div>
+                                <div class="form-group">
+                                    <input type="submit" value="Login" class="btn btn-primary" />
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div>
+                        <p>
+                            New School? Register here:
+                            <a asp-controller="Home" asp-action="Register">Register</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
